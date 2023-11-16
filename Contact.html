@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/m.ico">
+    <title>MLusung</title>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+        var image = [
+        "images/fb.png",
+        "images/twitter.png",
+        "images/tele.png"
+        ];
+        var num = 0;
+        function next(){
+            var slider = document.getElementById ("slider"); num++;
+            if (num >= image.length) {
+                num = 0;
+            }
+            slider.src = image[num];
+        }
+        function prev(){
+            var slider = document.getElementById ("slider"); num--;
+            if (num < 0) {
+                num = image.length-1;
+            }
+            slider.src = image[num];
+        }
+    </script>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <h2 class="logo"><a href="">MLusung</a></h2>
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" id="hamburger-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+            <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </label>
+        <ul class="links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Skills.html">Skills</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="section">
+      <div class="div">
+        <div class="contact-me">
+            <h2>Get In Touch</h2>
+            <h3>If you have any Inquary.</h3>
+            <p class="Descriptcontact">You can contact me here if you have other problem or question. I'll try to answer it immediately as possible.</p>
+            <div class="buttons">
+                <a href="mailto:mrt.lusung@gmail.com" class="resume">CONTACT ME</a>
+              </div>
+        </div>
+        <div class="bottom-container">
+          <a class="footer-link" href="https://www.facebook.com/">Facebook</a>
+          <a class="footer-link" href="https://twitter.com/">Twitter</a>
+          <a class="footer-link" href="https://www.telegram.com/">Telegram</a>
+          <p class="copyright">©2023 Mykel Lusung.</p>
+        </div>
+      </div>
+      <div class="img">
+        <div class="center">
+            <img id = "slider" src="images/front.png" background-attachment: fixed;>
+            <p>
+              <button class = "but" onclick="prev()"> Prev </button>
+              ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ
+              <button class = "but" onclick="next()"> next </button>
+            </p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
